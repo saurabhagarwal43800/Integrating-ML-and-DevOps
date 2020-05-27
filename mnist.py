@@ -1,6 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
 from keras.datasets import mnist
 
 dataset=mnist.load_data('mymnist.db')
@@ -30,19 +27,11 @@ model=Sequential()
 
 model.add(Dense(units=512,input_dim=28*28,activation='relu'))
 
-model.summary()
-
 model.add(Dense(units=256,activation='relu'))
-
-model.summary()
 
 model.add(Dense(units=128,activation='relu'))
 
-model.summary()
-
 model.add(Dense(units=32,activation='relu'))
-
-model.summary()
 
 model.add(Dense(units=10,activation='softmax'))
 
@@ -52,14 +41,19 @@ from keras.optimizers import RMSprop
 
 model.compile(optimizer=RMSprop(),loss='categorical_crossentropy',metrics=['accuracy'])
 
-h=model.fit(X_train,y_train_cat,epochs=1)
+model.fit(X_train,y_train_cat,epochs=3)
 
-plt.imshow(X_test[9999])
+accuracy=model.evaluate(x=X_test, y=y_test, batch_size=32)
+print("Accuracy",accuracy[1])
+Accuracy=accuracy[1]
+print(Accuracy)
 
-y_test[9999]
+#plt.imshow(X_test[9999])
 
-test_img=X_test[9999].reshape(-1,28*28)
+#y_test[9999]
 
-test_img=test_img.astype('float32')
+#test_img=X_test[9999].reshape(-1,28*28)
 
-model.predict(test_img)
+#test_img=test_img.astype('float32')
+
+#model.predict(test_img)
