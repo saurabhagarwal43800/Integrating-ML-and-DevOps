@@ -56,33 +56,3 @@ while accuracy < .90 :
     print("Accuracy: ",Accuracy[1])
     accuracy = Accuracy[1]
     print(accuracy)
-    
-
-
-'''
-model=Sequential()
-
-model.add(Dense(units=512,input_dim=28*28,activation='relu'))
-model.add(Dense(units=256,activation='relu'))
-
-model.add(Dense(units=128,activation='relu'))
-
-model.add(Dense(units=32,activation='relu'))
-
-model.add(Dense(units=10,activation='softmax'))
-
-model.summary()
-
-
-model.compile(optimizer=RMSprop(),loss='categorical_crossentropy',metrics=['accuracy'])
-
-model.fit(X_train,y_train_cat,epochs=3)
-
-accuracy=model.evaluate(x=X_test, y=y_test, batch_size=32)
-
-print("Accuracy",accuracy[1])
-
-Accuracy=accuracy[1]
-
-print(Accuracy)
-'''
