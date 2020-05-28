@@ -53,6 +53,6 @@ while accuracy < .90 :
     model.fit(X_train,y_train,batch_size=32,epochs=epoch,verbose=1)
     model.summary()
     Accuracy = model.evaluate(x=X_test,y=y_test,batch_size=32)
-    print("Accuracy: ",Accuracy[1])
-    accuracy = Accuracy[1]
+    print("Accuracy: ",int(Accuracy[1])*100)
+    accuracy = int(Accuracy[1])*100
     print(accuracy)
