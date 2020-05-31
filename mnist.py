@@ -11,22 +11,17 @@ train,test=dataset
 X_train,y_train=train
 X_test,y_test=test
 
-
-
 X_train=X_train.reshape(-1,28*28)
 X_train=X_train.astype('float32')
 y_train=to_categorical(y_train)
-
 
 X_test=X_test.reshape(-1,28*28)
 X_test=X_test.astype('float32')
 y_test=to_categorical(y_test)
 
-
 accuracy=0
 
-
-while accuracy < 90 :
+while accuracy < 80 :
     clear_session()
     counter=random.randint(1,5)
     learning_rate=random.choice([0.01,0.001,0.0001])
@@ -40,7 +35,7 @@ while accuracy < 90 :
     print("counter is ",counter)
     
     model.add(Dense(units=10,activation="softmax"))      
-    learning_rate = random.choice([0.01,0.001,0.0001]) #learning_rate/10
+    learning_rate = random.choice([0.01,0.001,0.0001]) 
     print("learning_rate is", learning_rate)
     opt=random.choice(opt)
     model.compile(optimizer=(opt)(learning_rate),loss="categorical_crossentropy",metrics=["accuracy"])
