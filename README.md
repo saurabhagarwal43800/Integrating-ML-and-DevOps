@@ -1,4 +1,5 @@
 # Integrating-ML-and-DevOps
+<img src="imgs/mlops1.png">
 
 ### What is Machine Learning?
 Machine learning is an application of artificial intelligence (AI) that provides systems the ability to automatically learn and improve from experience without being explicitly programmed. Machine learning focuses on the development of computer programs that can access data and use it learn for themselves.  
@@ -15,4 +16,6 @@ train-images-idx3-ubyte.gz:  training set images (9912422 bytes)
 train-labels-idx1-ubyte.gz:  training set labels (28881 bytes)  
 t10k-images-idx3-ubyte.gz:   test set images (1648877 bytes)  
 t10k-labels-idx1-ubyte.gz:   test set labels (4542 bytes)  
+
+<img src="imgs/mnist.png" width=600 height=400>
 
